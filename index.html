@@ -32,7 +32,7 @@
                                     </p>
                                     <p style="text-align:center">Email: kanesalingambrinthan187 [AT] gmail [DOT] com</p>
 
-                                    <p> Greetings! I am currently pursuing a master's degree (major component of research), at the <a href="https://uom.lk">University of Moratuwa</a>. 
+                                    <p> Greetings! I am currently completing my master's degree (major component of research), at the <a href="https://uom.lk">University of Moratuwa</a>. 
                                         I completed my undergraduate studies in <a href="https://uom.lk/ere">Earth Resources Engineering</a> at the same university, graduating with a BSc (Honours) degree.</p>
 
                                     <p> My research during my master's program centers on characterising microstructures in 3D materials to expand their applications and deepen our understanding of these substances. 
@@ -51,6 +51,52 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <table
+                    style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                    <tbody>
+                        <tr>
+                            <td style="padding:20px;width:100%;vertical-align:middle;line-height:150%">
+                                <heading><b>Recent Updates</b></heading>
+                                <ul>
+                                    <li>Our conference paper on the <a href='https://www.researchgate.net/publication/376481050_Weathered_Rock_Surface_Classification_with_Unpiloted_Aerial_Vehicle_Imagery_and_Machine_Learning'>Weathered Rock Surface Classification with Unpiloted Aerial Vehicle Imagery and Machine Learning</a> has been published in SLRMES 2023</li>
+                                    <li>Our conference paper on the <a href='https://doi.org/10.1109/IGARSS52108.2023.10281682'>Subclassification of water resources with Sentinel-2 satellite imagery - Spectra-based insight</a> has been published in IEEE IGRASS 2023 (h5-median 68)</li>
+                                    <li>Version 0.0.8 of <a href='https://pypi.org/project/pyDeepP2SA/'>pyDeepP2SA</a> has been released. This version includes the implementation of the line scan function and a worksheet effectively employ the package on a online platform.</li>
+                                    <li>Research talk on In Your Own Words: A Journey through Literature</li>
+                                    <li>Our abstract on Weathered Rock Surface Classification with Unpiloted Aerial Vehicle Imagery and Machine Learning has been accepted for presentation at the SLRMES conference.</li>
+                                    <li id="expandable8" style="display:none;">Successfully showcased <a href='https://brinthank.github.io/Presentations/poster'>a poster</a> of our accepted conference paper at IGRASS 2023 in Pasadena, California</li>
+                                    <li id="expandable7" style="display:none;">Presented <a href='https://brinthank.github.io/Presentations/poster'>a poster</a> at the International Summer School in Global Just Transition - Equity in Net Zero, held at Newcastle University, Newcastle upon Tyne, United Kingdom</li>
+                                    <li id="expandable6" style="display:none;">Participated in the International Summer School in Global Just Transition - Equity in Net Zero, hosted at Newcastle University, Newcastle upon Tyne, United Kingdom</li>
+                                    <li id="expandable5" style="display:none;">Our review paper about the <a href='https://www.mdpi.com/2075-163X/13/6/724'>coal fly ash and biometallurgy</a> has been published in Minerals, MDPI</li>
+                                    <li id="expandable4" style="display:none;">Delivered <a href='https://brinthank.github.io/Presentations/poster'>an oral presentation</a> at the WorldCUR 2023</li>
+                                    <li id="expandable3" style="display:none;">Showcased an oral presentation during the Research Week organised by the University of Moratuwa</li>
+                                    <li id="expandable2" style="display:none;">Our <a href='http://localhost:4000/publications/'>paper</a> on the final year research project has been published in ISERME 2022</li>
+                                    <li id="expandable1" style="display:none;">Commenced my Master's degree program at the University of Moratuwa</li>
+                                    <a id="expand" href="#" onclick="toggleExpandable(); return false;">More...</a>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <script>
+                    function toggleExpandable() {
+                        var expandables = document.querySelectorAll('[id^="expandable"]');
+                        expandables.forEach(function (expandable) {
+                            if (expandable.style.display === "none") {
+                                expandable.style.display = "list-item";
+                            } else {
+                                expandable.style.display = "none";
+                            }
+                        });
+                        var expand_text = document.getElementById("expand").innerHTML;
+                        if (expand_text == "More...") {
+                            document.getElementById("expand").innerHTML = "Less...";
+                        } else {
+                            document.getElementById("expand").innerHTML = "More...";
+                        }
+                    }
+                </script>
                 </td>
             </tr>
         </tbody>
