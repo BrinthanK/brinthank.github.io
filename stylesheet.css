@@ -251,3 +251,14 @@ span.highlight {
   text-decoration: none;
   cursor: pointer;
 }
+
+blockquote {
+  border: 2px solid red; /* Red border around the blockquote */
+  margin: 20px auto;    /* Adds space around the blockquote and centers it horizontally */
+  padding: 10px;         /* Adds space inside the blockquote */
+  font-style: italic;    /* Keeps the text italicized */
+  background-color: #ffffff; /* Light gray background */
+  text-align: center;   /* Centers the text */
+  display: block;       /* Ensures the blockquote behaves like a block-level element */
+  width: 80%;           /* Optionally sets the width to 80% of its container */
+}
