@@ -4,6 +4,225 @@
 
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+    <style>
+        body {
+            font-family: "Computer Modern Serif", serif;
+        }
+
+        /* Existing styles */
+
+        a {
+            color: #1772d0;
+            text-decoration: none;
+        }
+
+        a:focus,
+        a:hover {
+            color: #f09228;
+            text-decoration: none;
+        }
+
+        body,
+        td,
+        th,
+        tr,
+        p,
+        a {
+            font-size: 14px;
+        }
+
+        strong {
+            font-size: 14px;
+        }
+
+        heading {
+            font-size: 18px;
+        }
+
+        papertitle {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        name {
+            font-size: 40px;
+        }
+
+        .one {
+            width: 110px;
+            height: 110px;
+            position: relative;
+        }
+
+        .two {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+
+        .fade {
+            transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -webkit-transition: opacity .2s ease-in-out;
+        }
+
+        span.highlight {
+            background-color: #ffffd0;
+        }
+
+        #main_navigation {
+            font-size: 14px;
+            height: 50px;
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .main-menu {
+            position: relative;
+            z-index: 22;
+            font-family: 'Droid Sans', arial, serif;
+        }
+
+        .main-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .main-menu ul a:hover {
+            border-bottom: 2px solid #0091ed;
+        }
+
+        .main-menu ul li {
+            position: relative;
+            display: inline;
+            float: left;
+            font-size: 14px;
+        }
+
+        .main-menu ul li a,
+        .main-menu ul li a:link,
+        .main-menu ul li a:visited {
+            line-height: 40px;
+            color: #363636;
+            font-size: 14px;
+        }
+
+        .main-menu ul li a:hover {
+            color: #0091ed;
+        }
+
+        .main-menu ul li a {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+            padding: 0px 15px;
+        }
+
+        * html .main-menu ul li a {
+            display: inline-block;
+        }
+
+        .main-menu ul li ul {
+            position: absolute;
+            left: 0px;
+            display: block;
+            visibility: hidden;
+        }
+
+        .main-menu ul li ul li {
+            display: list-item;
+            float: none;
+        }
+
+        .main-menu ul li ul li a {
+            width: 160px;
+            padding: 5px 10px;
+        }
+
+        .main-menu ul ul {
+            background: #FFF;
+            border: 1px solid #e0e0e0;
+        }
+
+        .main-menu ul ul li a,
+        .main-menu ul ul li a:link,
+        .main-menu ul ul li a:visited {
+            height: 100%;
+            line-height: 20px;
+            background: transparent !important;
+            border-bottom: dotted 1px #e1e1e1;
+            padding: 5px 10px !important;
+        }
+
+        .main-menuz ul li ul li a:hover,
+        .main-menu ul ul li a:hover {
+            text-decoration: none !important;
+            margin: 0 0px;
+            color: #0091ed;
+        }
+
+        .main-menuz ul ul li ul li a:hover,
+        .main-menu ul ul ul li a:hover {
+            text-decoration: none !important;
+            width: 155px;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        blockquote {
+            border: 2px solid red;
+            margin: 20px auto;
+            padding: 10px;
+            font-style: italic;
+            background-color: #ffffff;
+            text-align: center;
+            display: block;
+            width: 80%;
+        }
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Brinthan Kanesalingam">
@@ -56,7 +275,8 @@
                         </tbody>
                     </table>
 
-                    <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
                             <tr>
                                 <td style="padding:20px;width:100%;vertical-align:middle;line-height:150%">
@@ -85,10 +305,9 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table> -->
+                    </table>
                     
-
-                <!-- <script>
+                     <script>
                     function toggleExpandable() {
                         var expandables = document.querySelectorAll('[id^="expandable"]');
                         expandables.forEach(function (expandable) {
@@ -105,7 +324,7 @@
                             document.getElementById("expand").innerHTML = "More...";
                         }
                     }
-                </script> -->
+                    </script> 
 
                 <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;line-height: 12px;">
                     <tbody>
