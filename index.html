@@ -51,9 +51,6 @@
             color: rgb(140, 21, 21);
         }
 
-        ;
-        }
-
         papertitle {
             font-size: 16px;
             font-weight: 300;
@@ -237,6 +234,30 @@
             display: block;
             width: 80%;
         }
+        
+        /* Filter buttons styling */
+        .filter-btn {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 6px 12px;
+            margin: 0 4px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: "Computer Modern Serif", serif;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .filter-btn.active {
+            background-color: rgb(140, 21, 21);
+            color: white;
+            border-color: rgb(140, 21, 21);
+        }
     </style>
 </head>
 
@@ -274,7 +295,7 @@
                                         <i>computational X-ray microanalysis</i>. In my MSc thesis, I worked on the
                                         <i>3D nano and microstructures of complex natural materials</i> using energy
                                         dispersive X-ray spectroscopy (EDS) data. I have also worked on <i>remote
-                                            sensing</i> and <i>machine learning</i> applications in the past.</p>
+                                            sensing</i> and <i>machine learning</i> applications in the past years.</p>
 
 
                                     <p>I care about <span style="color: green;">sustainability</span> and <span
@@ -315,105 +336,121 @@
                             <tr>
                                 <td style="padding:20px;width:100%;vertical-align:middle;line-height:150%">
                                     <heading><b>Recent Updates</b></heading>
-                                    <ul>
-                                        <li><span style="color: rgb(140, 21, 21);">Dec 30, 2024 -</span> Published the
+                                    <div style="margin: 15px 0; text-align: center;">
+                                        <button class="filter-btn active" onclick="filterUpdates('all')">All</button>
+                                        <button class="filter-btn" onclick="filterUpdates('publications')">Publications</button>
+                                        <button class="filter-btn" onclick="filterUpdates('experiments')">Experiments</button>
+                                        <button class="filter-btn" onclick="filterUpdates('python')">Python Releases</button>
+                                        <button class="filter-btn" onclick="filterUpdates('general')">General Info</button>
+                                        <select id="year-filter" onchange="filterByYear(this.value)" style="margin-left: 10px; padding: 6px; border-radius: 4px; border: 1px solid #ddd; font-family: 'Computer Modern Serif', serif; font-size: 14px;">
+                                            <option value="all">All Years</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2022">2022</option>
+                                        </select>
+                                    </div>
+                                    <ul id="updates-list">
+                                        <li data-category="experiments" data-year="2025"> <span style="color: rgb(140, 21, 21);">Mar 01 - Mar 12, 2025 - </span>Spent time at <a href="https://lcls.slac.stanford.edu">LCLS</a> for Strain imaging DFXM experiments.
+                                        <li data-category="publications" data-year="2025"> <span style="color: rgb(140, 21, 21);">Feb 17, 2025 -</span> Published the preprint on <a href="https://arxiv.org/abs/2502.11350">&#x301D;Planar 3ω and 2ω Method for Increased Sensitivity to Through-Plane Thermal Properties&#x301E;</a> work on arXiv.</li>
+                                        <li data-category="experiments" data-year="2024"><span style="color: rgb(140, 21, 21);">Nov 28 - Dec 06, 2024 - </span>Spent
+                                            time at <a href="https://www.psi.ch/en">PSI,</a> Switzerland for Neutron
+                                            imaging experiments.</li>
+                                        <li data-category="experiments" data-year="2024"><span style="color: rgb(140, 21, 21);">Nov 08 - Nov 11, 2024 - </span>Spent
+                                            time at <a href="https://www.esrf.fr">ESRF,</a> France on Multipeak DFXM
+                                            experiments.</li>
+                                        <li data-category="publications" data-year="2024"> <span style="color: rgb(140, 21, 21);">Dec 30, 2024 -</span> Published the
                                             journal paper on my master's work,<a
                                                 href="https://chemistry-europe.onlinelibrary.wiley.com/doi/epdf/10.1002/slct.202400480">&#x301D;Shedding
                                                 Electrons on Cenospheres: Advancing Characterization Through X-ray
                                                 Micro-Analysis&#x301E;</a> in Chemistry Select.</li>
-                                        <li><span style="color: rgb(140, 21, 21);">Nov 28 - Dec 06, 2024 - </span>Spent
-                                            time at <a href="https://www.psi.ch/en">PSI,</a> Switzerland for Neutron
-                                            imaging experiments.</li>
-                                        <li><span style="color: rgb(140, 21, 21);">Nov 08 - Nov 11, 2024 - </span>Spent
-                                            time at <a href="https://www.esrf.fr">ESRF,</a> France on Multipeak DFXM
-                                            experiments.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Oct 13, 2024 -</span> Published the
+                                        <li data-category="publications" data-year="2024"> <span style="color: rgb(140, 21, 21);">Oct 13, 2024 -</span> Published the
                                             preprint <a
                                                 href="https://chemrxiv.org/engage/chemrxiv/article-details/6706be17cec5d6c142b5e228">&#x301D;A
                                                 Percolating Path to Green Iron&#x301E;</a> work on ChemRxiv.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Aug 13, 2024 -</span> Gave a
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Aug 13, 2024 -</span> Gave a
                                             lightning talk about the summer research work on multipeak DFXM.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Jul 25, 2024 -</span> Presented in
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jul 25, 2024 -</span> Presented in
                                             Summer First journal club, <a
                                                 href="https://www.nature.com/articles/s41598-023-30767-w">&#x301D;Extensive
                                                 3D mapping of dislocation structures in bulk aluminum&#x301E;</a>.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Jun 24, 2024 -</span> Started my
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jun 24, 2024 -</span> Started my
                                             2024 summer with the <a
                                                 href="https://engineering.stanford.edu/students-academics/equity-and-inclusion-initiatives/graduate-programs/summer-opportunities/meet-our">Summer
                                                 First Fellowship</a> at Stanford University.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Jun 22, 2024 -</span> Moved to
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jun 22, 2024 -</span> Moved to
                                             California, USA, to pursue a PhD in Materials Science and Engineering at
                                             Stanford University.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Apr 08, 2024 -</span> Published an
+                                        <li data-category="publications" data-year="2024"> <span style="color: rgb(140, 21, 21);">Apr 08, 2024 -</span> Published an
                                             article,<a
                                                 href="https://www.iom3.org/resource/coal-calm-and-collected.html">&#x301D;Coal,
                                                 calm and collected&#x301E;</a>on Materials World, IOM3.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Apr 05, 2024 -</span> Defended the
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Apr 05, 2024 -</span> Defended the
                                             MSc thesis.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Feb 14, 2024 -</span> Assigned as a
+                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Feb 14, 2024 -</span> Assigned as a
                                             research assistant within the <a href="http://datasearch.uom.lk">
                                                 DataSEARCH</a> research group, Department of Computer Science and
                                             Engineering, University of Moratuwa.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Dec 15, 2023 -</span> Submitted MSc
+                                        <li id="expandable15" data-category="general" data-year="2023" style="display:none;"> <span style="color: rgb(140, 21, 21);">Dec 15, 2023 -</span> Submitted MSc
                                             thesis for the evaluation.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Dec 04, 2023 -</span> Conference
+                                        <li id="expandable14" data-category="publications" data-year="2023" style="display:none;"> <span style="color: rgb(140, 21, 21);">Dec 04, 2023 -</span> Conference
                                             paper on the <a
                                                 href='https://www.researchgate.net/publication/376481050_Weathered_Rock_Surface_Classification_with_Unpiloted_Aerial_Vehicle_Imagery_and_Machine_Learning'>Weathered
                                                 Rock Surface Classification with Unpiloted Aerial Vehicle Imagery and
                                                 Machine Learning</a> has been published in SLRMES 2023.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Oct 22, 2023 -</span> Conference
+                                        <li id="expandable13" data-category="publications" data-year="2023" style="display:none;"> <span style="color: rgb(140, 21, 21);">Oct 22, 2023 -</span> Conference
                                             paper on the <a
                                                 href='https://doi.org/10.1109/IGARSS52108.2023.10281682'>Subclassification
                                                 of water resources with Sentinel-2 satellite imagery - Spectra-based
                                                 insight</a> has been published in IEEE IGRASS 2023.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Oct 17, 2023 -</span> Version 0.0.8
+                                        <li id="expandable12" data-category="python" data-year="2023" style="display:none;"> <span style="color: rgb(140, 21, 21);">Oct 17, 2023 -</span> Version 0.0.8
                                             of <a href='https://pypi.org/project/pyDeepP2SA/'>pyDeepP2SA</a> has been
                                             released. This version includes the implementation of the line scan function
                                             and a worksheet effectively employ the package on an online platform.</li>
-                                        <li> <span style="color: rgb(140, 21, 21);">Sep 25, 2023 -</span> Attained
+                                        <li id="expandable11" data-category="general" data-year="2023" style="display:none;"> <span style="color: rgb(140, 21, 21);">Sep 25, 2023 -</span> Attained
                                             prestigious membership in the Royal Microscopical Society, United Kingdom.
                                             Featured within the <a
                                                 href="https://www.rms.org.uk/community/focussed-interest-groups/x-ray-microscopy.html">X-ray
                                                 microscopy group</a>.</li>
-                                        <li id="expandable10" style="display:none;"> <span
+                                        <li id="expandable10" data-category="general" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Aug 11, 2023 -</span> Research talk on
                                             In Your Own Words: A Journey through Literature.</li>
-                                        <li id="expandable9" style="display:none;"> <span
+                                        <li id="expandable9" data-category="publications" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Jul 31, 2023 -</span> Abstract on
                                             Weathered Rock Surface Classification with Unpiloted Aerial Vehicle Imagery
                                             and Machine Learning has been accepted for presentation at the SLRMES
                                             conference.</li>
-                                        <li id="expandable8" style="display:none;"> <span
+                                        <li id="expandable8" data-category="publications" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Jul 16, 2023 -</span> Successfully
                                             showcased <a href='docs/Posters/igrass2023california.pdf'>a poster</a> of
                                             our accepted conference paper at IGRASS 2023 in Pasadena, California.</li>
-                                        <li id="expandable7" style="display:none;"> <span
+                                        <li id="expandable7" data-category="publications" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Jun 22, 2023 -</span> Presented <a
                                                 href='docs/Posters/summerschool2023newcastle.pdf'>a poster</a> at the
                                             International Summer School in Global Just Transition - Equity in Net Zero,
                                             held at Newcastle University, Newcastle upon Tyne, United Kingdom.</li>
-                                        <li id="expandable6" style="display:none;"> <span
+                                        <li id="expandable6" data-category="general" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Jul 19, 2023 -</span> Participated in
                                             the International Summer School in Global Just Transition - Equity in Net
                                             Zero, hosted at Newcastle University, Newcastle upon Tyne, United Kingdom.
                                         </li>
-                                        <li id="expandable5" style="display:none;"> <span
+                                        <li id="expandable5" data-category="publications" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">May 25, 2023 -</span> Review paper
                                             about the <a href='https://www.mdpi.com/2075-163X/13/6/724'>coal fly ash and
                                                 biometallurgy</a> has been published in Minerals, MDPI.</li>
-                                        <li id="expandable4" style="display:none;"> <span
+                                        <li id="expandable4" data-category="publications" data-year="2023" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Apr 05, 2023 -</span> Delivered <a
                                                 href='docs/Presentations/worldcur2023warwick.pdf'>an oral
                                                 presentation</a> at the WorldCUR 2023.</li>
-                                        <li id="expandable3" style="display:none;"> <span
+                                        <li id="expandable3" data-category="publications" data-year="2022" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Dec 09, 2022 -</span> Showcased <a
                                                 href='docs/Posters/researchweek2022uom.pdf'>a poster</a> during the
                                             Research Week organised by the University of Moratuwa.</li>
-                                        <li id="expandable2" style="display:none;"> <span
+                                        <li id="expandable2" data-category="publications" data-year="2022" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Dec 02, 2022 -</span> A <a
                                                 href='docs/Papers/brinthan2022experimental.pdf'>paper</a> on the final
                                             year research project has been published in ISERME 2022.</li>
-                                        <li id="expandable1" style="display:none;"> <span
+                                        <li id="expandable1" data-category="general" data-year="2022" style="display:none;"> <span
                                                 style="color: rgb(140, 21, 21);">Sep 05, 2022 -</span> Commenced my
                                             Master's degree program at the University of Moratuwa.</li>
                                         <a id="expand" href="#" onclick="toggleExpandable(); return false;">More...</a>
@@ -426,19 +463,92 @@
                     <script>
                         function toggleExpandable() {
                             var expandables = document.querySelectorAll('[id^="expandable"]');
-                            expandables.forEach(function (expandable) {
-                                if (expandable.style.display === "none") {
-                                    expandable.style.display = "list-item";
+                            var currentFilter = document.querySelector('.filter-btn.active').getAttribute('onclick').split("'")[1];
+                            var currentYear = document.getElementById('year-filter').value;
+                            var expand_text = document.getElementById("expand").innerHTML;
+                            var showMore = expand_text === "More...";
+                            
+                            // More/Less should only work if both "All" category and "all" years are selected
+                            if (currentFilter === 'all' && currentYear === 'all') {
+                                expandables.forEach(function (expandable) {
+                                    expandable.style.display = showMore ? "list-item" : "none";
+                                });
+                                
+                                // Toggle button text
+                                document.getElementById("expand").innerHTML = showMore ? "Less..." : "More...";
+                            }
+                        }
+                        
+                        function filterUpdates(category) {
+                            // Update active button
+                            document.querySelectorAll('.filter-btn').forEach(function(btn) {
+                                btn.classList.remove('active');
+                            });
+                            event.target.classList.add('active');
+                            
+                            // Get current year filter
+                            var currentYear = document.getElementById('year-filter').value;
+                            
+                            // Only show the More/Less button when both "All" category AND "all" years are selected
+                            var expandBtn = document.getElementById("expand");
+                            if (category === 'all' && currentYear === 'all') {
+                                expandBtn.style.display = '';
+                                expandBtn.innerHTML = "More...";
+                            } else {
+                                expandBtn.style.display = 'none';
+                            }
+                            
+                            // Filter items
+                            var items = document.querySelectorAll('#updates-list li');
+                            items.forEach(function(item) {
+                                var isExpandable = item.id && item.id.startsWith('expandable');
+                                
+                                // Hide expandable items only when both category and year are "all"
+                                // For specific year or category filters, show all matching items
+                                if (category === 'all' && currentYear === 'all' && isExpandable) {
+                                    item.style.display = 'none';
+                                }
+                                // For all other items, check if they match the filter
+                                else if ((category === 'all' || item.getAttribute('data-category') === category) &&
+                                    (currentYear === 'all' || item.getAttribute('data-year') === currentYear)) {
+                                    item.style.display = 'list-item';
                                 } else {
-                                    expandable.style.display = "none";
+                                    item.style.display = 'none';
                                 }
                             });
-                            var expand_text = document.getElementById("expand").innerHTML;
-                            if (expand_text == "More...") {
-                                document.getElementById("expand").innerHTML = "Less...";
+                        }
+                        
+                        function filterByYear(year) {
+                            // Get current category filter
+                            var currentCategory = document.querySelector('.filter-btn.active').getAttribute('onclick').split("'")[1];
+                            
+                            // Only show the More/Less button when both "All" category AND "all" years are selected
+                            var expandBtn = document.getElementById("expand");
+                            if (currentCategory === 'all' && year === 'all') {
+                                expandBtn.style.display = '';
+                                expandBtn.innerHTML = "More...";
                             } else {
-                                document.getElementById("expand").innerHTML = "More...";
+                                expandBtn.style.display = 'none';
                             }
+                            
+                            // Filter items
+                            var items = document.querySelectorAll('#updates-list li');
+                            items.forEach(function(item) {
+                                var isExpandable = item.id && item.id.startsWith('expandable');
+                                
+                                // Hide expandable items only when both category and year are "all"
+                                // For specific year or category filters, show all matching items
+                                if (currentCategory === 'all' && year === 'all' && isExpandable) {
+                                    item.style.display = 'none';
+                                }
+                                // For all other items, check if they match the filter
+                                else if ((year === 'all' || item.getAttribute('data-year') === year) &&
+                                    (currentCategory === 'all' || item.getAttribute('data-category') === currentCategory)) {
+                                    item.style.display = 'list-item';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
                         }
                     </script>
 
@@ -489,7 +599,7 @@
                                 <td style="padding:0px">
                                     <br>
                                     <p style="text-align:right;font-size:small;">
-                                        Template courtesy: <a href="https://jonbarron.info/">Jon Barron</a>.
+                                        Modified from <a href="https://jonbarron.info/">Jon Barron</a>.
                                     </p>
                                 </td>
                             </tr>
