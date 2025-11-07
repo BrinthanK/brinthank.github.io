@@ -373,24 +373,24 @@
                                                 Percolating Path to Green Iron&#x301E;</a> work on ChemRxiv.</li>
                                         <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Aug 13, 2024 -</span> Gave a
                                             lightning talk about the summer research work on multipeak DFXM.</li>
-                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jul 25, 2024 -</span> Presented in
+                                        <li id="expandable21" data-category="general" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Jul 25, 2024 -</span> Presented in
                                             Summer First journal club, <a
                                                 href="https://www.nature.com/articles/s41598-023-30767-w">&#x301D;Extensive
                                                 3D mapping of dislocation structures in bulk aluminum&#x301E;</a>.</li>
-                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jun 24, 2024 -</span> Started my
+                                        <li id="expandable20" data-category="general" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Jun 24, 2024 -</span> Started my
                                             2024 summer with the <a
                                                 href="https://engineering.stanford.edu/students-academics/equity-and-inclusion-initiatives/graduate-programs/summer-opportunities/meet-our">Summer
                                                 First Fellowship</a> at Stanford University.</li>
-                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Jun 22, 2024 -</span> Moved to
+                                        <li id="expandable19" data-category="general" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Jun 22, 2024 -</span> Moved to
                                             California, USA, to pursue a PhD in Materials Science and Engineering at
                                             Stanford University.</li>
-                                        <li data-category="publications" data-year="2024"> <span style="color: rgb(140, 21, 21);">Apr 08, 2024 -</span> Published an
+                                        <li id="expandable18" data-category="publications" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Apr 08, 2024 -</span> Published an
                                             article,<a
                                                 href="https://www.iom3.org/resource/coal-calm-and-collected.html">&#x301D;Coal,
                                                 calm and collected&#x301E;</a>on Materials World, IOM3.</li>
-                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Apr 05, 2024 -</span> Defended the
+                                        <li id="expandable17" data-category="general" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Apr 05, 2024 -</span> Defended the
                                             MSc thesis.</li>
-                                        <li data-category="general" data-year="2024"> <span style="color: rgb(140, 21, 21);">Feb 14, 2024 -</span> Assigned as a
+                                        <li id="expandable16" data-category="general" data-year="2024" style="display:none;"> <span style="color: rgb(140, 21, 21);">Feb 14, 2024 -</span> Assigned as a
                                             research assistant within the <a href="http://datasearch.uom.lk">
                                                 DataSEARCH</a> research group, Department of Computer Science and
                                             Engineering, University of Moratuwa.</li>
@@ -465,7 +465,9 @@
 
                     <script>
                         function toggleExpandable() {
+                            // Toggle all expandables (any id starting with "expandable")
                             var expandables = document.querySelectorAll('[id^="expandable"]');
+                            
                             var currentFilter = document.querySelector('.filter-btn.active').getAttribute('onclick').split("'")[1];
                             var currentYear = document.getElementById('year-filter').value;
                             var expand_text = document.getElementById("expand").innerHTML;
