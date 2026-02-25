@@ -258,26 +258,11 @@
             color: white;
             border-color: rgb(140, 21, 21);
         }
-
-        #vanta-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .page-content {
-            position: relative;
-            z-index: 1;
-        }
     </style>
 </head>
 
 <body>
-    <div id="vanta-bg"></div>
-    <div class="page-content">
+
     <table
         style="width:100%;max-width:975px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody>
@@ -287,7 +272,7 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
                             <tr style="padding:0px">
-                                <td style="padding:2.5%;width:20%;max-width:40%;padding-top: 0px;">
+                                <td style="padding:2.5%;width:20%;max-width:40%;padding-top: 0px;vertical-align:middle;">
                                     <a href="images/Brinthan.jpg"><img
                                             style="width:100%;max-width:100%; padding-top: 0px;" alt="profile photo"
                                             src="images/Brinthan.jpg" class="hoverZoomLink"></a>
@@ -633,30 +618,6 @@
             </tr>
         </tbody>
     </table>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.dots.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            VANTA.DOTS({
-                el: "#vanta-bg",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x693521,
-                color2: 0xd2a78a,
-                backgroundColor: 0xffffff,
-                size: 3.20,
-                spacing: 16.00,
-                showLines: false
-            });
-        });
-    </script>
 </body>
 
 <script>
